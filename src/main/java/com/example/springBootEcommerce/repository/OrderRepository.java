@@ -8,6 +8,6 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
 @RepositoryRestResource
-public interface OrderRespository extends JpaRepository<Order,Long> {
-    Page<Order> findByCustomerMailOOrderByCreatedAtDesc(@Param("email")String email, Pageable pageable);
+public interface OrderRepository extends JpaRepository<Order,Long> {
+    Page<Order> findByCustomerMailOrderByCreatedAtDesc(@Param("email")String email, Pageable pageable);
 }
